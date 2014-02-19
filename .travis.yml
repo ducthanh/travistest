@@ -6,13 +6,12 @@ rvm:
   - rbx
 gemfile:
   - Gemfile
-  - gemfiles/Gemfile.base-versions
 matrix:
   exclude:
     # Nokogiri 1.3.3 is not compatible with Rubinius or JRuby
-    - gemfile: gemfiles/Gemfile.base-versions
+    - gemfile: Gemfile
       rvm: rbx
-    - gemfile: gemfiles/Gemfile.base-versions
+    - gemfile: Gemfile
       rvm: jruby-19mode
 before_install:
   - CHROMEDRIVER_VERSION=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
