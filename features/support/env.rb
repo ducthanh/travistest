@@ -5,8 +5,7 @@ require 'debugger'
 require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'utils')
 require 'csv'
 require 'rspec-expectations'
-require 'sauce'
-require 'sauce/capybara'
+
 # require 'cucumber/formatter/ABC'
 #require 'capybara-screenshot/cucumber'
 #sudo gem install rspec-rails
