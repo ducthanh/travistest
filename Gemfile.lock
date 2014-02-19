@@ -50,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  cucumber
   cucumber-rails
   rspec-expectations
   selenium-webdriver

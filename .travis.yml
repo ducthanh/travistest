@@ -2,6 +2,6 @@ language: ruby
 gemfile:
   - Gemfile
 rvm:
-  - 1.9.3p448
+  - 1.9.3
 cache: bundler
 script: bundle exec cucumber
