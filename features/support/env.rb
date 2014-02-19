@@ -24,7 +24,7 @@ Capybara.configure do |config|
 end
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
 # REMOTE WORKING 2
