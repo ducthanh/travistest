@@ -1,1 +1,2 @@
-bundle install
+before_install 
+	bundle install
