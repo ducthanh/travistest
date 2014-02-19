@@ -1,7 +1,6 @@
 require 'capybara/cucumber'
 require 'capybara/dsl'
 require 'selenium-webdriver'
-require 'debugger'
 require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'utils')
 require 'csv'
 require 'rspec-expectations'
