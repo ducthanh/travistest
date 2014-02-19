@@ -7,5 +7,4 @@ rvm:
   - jruby-19mode # JRuby in 1.9 mode
   - rbx
 cache: bundler
-install: gem install debugger
 script: bundle exec cucumber
