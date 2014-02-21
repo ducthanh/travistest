@@ -21,6 +21,6 @@ end
 Sauce.config do |config|
   config[:browsers] = [
     ["OSX 10.6", "firefox", nil]]
-  config[:name] = "HGWM w Travis"
+  config[:name] = "HGWM w Travis w SL"
   config[:passed] = "true"
 end
