@@ -4,31 +4,23 @@ require 'selenium-webdriver'
 require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'utils')
 require 'csv'
 require 'rspec-expectations'
+require 'sauce'
+require 'capybara/rspec'
+require "sauce/capybara"
 
-# require 'cucumber/formatter/ABC'
-#require 'capybara-screenshot/cucumber'
-#sudo gem install rspec-rails
-##run REMOTE 1
-# Capybara.app_host = "http://thanhnguyen.local"
-
-# Chrome
-# Capybara.default_driver = :selenium_chrome
-# Capybara.register_driver :selenium_chrome do |app|
-# Capybara::Selenium::Driver.new(app, :browser => :chrome)
-# end
-Capybara.default_driver = :selenium
+Capybara.default_driver = :sauce
 Capybara.default_wait_time = 5
 Capybara.configure do |config|
   config.javascript_driver = :selenium
-  #config.javascript_driver = :poltergeist
 end
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
-# REMOTE WORKING 2
-# Capybara.register_driver :selenium do |app|
-#   Capybara::Selenium::Driver.new(app, :browser => :remote, :url => "http://thanhnguyen.local:4444/wd/hub", :desired_capabilities => :firefox)
-# end
-##
+Sauce.config do |config|
+  config[:browsers] = [
+    ["OSX 10.6", "firefox", nil]]
+  config[:name] = "HGWM w Travis"
+  config[:passed] = "true"
+end
