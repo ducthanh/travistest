@@ -15,7 +15,7 @@ Given(/^TC_002 Open the HGWM page$/) do
 end
 
 And(/^I scroll page to the bottom$/) do
-  page.execute_script "window.scrollBy(0,10000)"
+  page.execute_script "window.scrollBy(0,400)"
 end
 
 Then(/^The footer should be displayed$/) do
@@ -122,4 +122,5 @@ end
 
 Then(/^I should Subcribe successful$/) do
   page.should have_content(Var[:confirm_subcribe])
+  sleep 1
 end

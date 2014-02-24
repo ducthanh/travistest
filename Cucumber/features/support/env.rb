@@ -14,13 +14,13 @@ Capybara.configure do |config|
   config.javascript_driver = :selenium
 end
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
+# Capybara.register_driver :selenium do |app|
+#   Capybara::Selenium::Driver.new(app, :browser => :chrome)
+# end
 
 Sauce.config do |config|
   config[:browsers] = [
-    ["OSX 10.6", "firefox", nil]]
-  config[:name] = "HGWM w Travis w SL"
+    ["Windows 8", "firefox", nil]]
+  config[:name] = "CI with Travis"
   config[:passed] = "true"
 end
