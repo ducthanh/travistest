@@ -3,10 +3,11 @@ language: ruby
 rvm:
   - 1.9.3
 gemfile:
-  - Gemfile
+  - Cucumber/Gemfile
 addons:
   sauce_connect:
     username: "ducthanh"
     access_key: "4f4c3e54-5f3b-4a78-8398-1889791167bc" 
 script: 
+- cd Cucumber
 - bundle exec cucumber
